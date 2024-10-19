@@ -1,0 +1,57 @@
+{
+    "name": "uptime-wachter",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "mocha 'test/**/*.ts' --exclude 'test-system/**/*.ts'",
+        "prettier": "prettier --write --cache --cache-strategy metadata . !dist",
+        "lint": "eslint .",
+        "guard": "node ./dist/index.js",
+        "buildAndGuard": "npm run build && npm run guard"
+    },
+    "keywords": [],
+    "author": "eyepokes",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/eyepokes/uptime-wachter.git"
+    },
+    "homepage": "https://github.com/eyepokes/uptime-wachter#readme",
+    "bugs": {
+        "url": "https://github.com/eyepokes/uptime-wachter/issues"
+    },
+    "packageManager": "pnpm@9.12.0",
+    "engines": {
+        "node": ">=18"
+    },
+    "devDependencies": {
+        "@types/luxon": "^3.4.2",
+        "@types/mocha": "^10.0.8",
+        "@types/node": "^22.7.0",
+        "@types/numeral": "^2.0.5",
+        "@types/sinon": "^17.0.3",
+        "@typescript-eslint/eslint-plugin": "^8.8.0",
+        "@typescript-eslint/parser": "^8.8.0",
+        "eslint": "^9.11.1",
+        "eslint-plugin-prettier": "^5.2.1",
+        "eslint-plugin-unused-imports": "^4.1.4",
+        "mocha": "^10.7.3",
+        "prettier": "^3.3.3",
+        "sinon": "^19.0.2",
+        "ts-node": "^10.9.2",
+        "tsup": "^8.3.0",
+        "typescript": "^5.6.2"
+    },
+    "dependencies": {
+        "cron": "^3.1.7",
+        "cron-parser": "^4.9.0",
+        "dotenv": "^16.4.5",
+        "globalping-ts": "^1.0.3",
+        "luxon": "^3.5.0",
+        "numeral": "^2.0.6",
+        "telegraf": "^4.16.3"
+    }
+}
